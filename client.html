@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>GAME HOUSE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="gallery.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="game.html">Games</a>
+    <a href="client.html">Client</a>
+    <a href="photos.html">Gallery</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="container">
+    <img src="IMG/banner-bg.png" alt="Snow">
+    <!-- <div class="bottom-left">Bottom Left</div> -->
+    <div class="top-left">
+      <!-- <a href="index.html">Home</a>&nbsp;&nbsp;
+
+      <a href="gallery.html">About</a>&nbsp;&nbsp;
+      <a href="game.html">Games</a>&nbsp;&nbsp;
+      <a href="contact.html">Contact</a> -->
+
+    </div>
+    <!-- <div class="top-right">Top Right</div>
+    <div class="bottom-right">Bottom Right</div> -->
+    <div class="centered">
+      <h2>welcome to</h2>
+      <h1>GAME HOUSE</h1>
+      <H3>The best gaming center in town. with lots of game online website games and real time offline games best in the town</H3>
+    
+    </div>
+  </div>
+  <h1 id="test">Testimonials</h1>
+<div class="testimonial-container">
+  <div class="progress-bar"></div>
+  <div class="fas fa-quote-right fa-quote"></div>
+  <div class="fas fa-quote-left fa-quote"></div>
+  <p class="testimonial">
+    
+    super place to play online games.good staff and nice place i like it
+  </p>
+  <div class="user">
+    <img
+         src="https://randomuser.me/api/portraits/women/40.jpg"
+         alt="user"
+         class="user-image"
+         />
+    <div class="user-details">
+      <h4 class="username">Miyah Myles</h4>
+      <p class="role">chalakudy</p>
+    </div>
+  </div>
+</div>
+<div class="error"></div>
+
+<div class="footer">
+  All right@game house<br>
+  ALVIN JOSHY<br>
+chungath house chervaloor p.o kulayidam
+
+</div>
+<script>
+   
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+    
+    const testemonialsContainer = document.querySelector('.testimonials-container')
+const testemonial = document.querySelector('.testimonial')
+const userImage = document.querySelector('.user-image')
+const userName = document.querySelector('.username')
+const role = document.querySelector('.role')
+
+const testimonials = [
+	{
+		name: "Miyah Myles",
+		position: "chalakudy",
+		photo:
+			"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6",
+		text: "nice place with lots of game very good",
+	},
+	{
+		name: "June Cha",
+		position: "aluva",
+		photo: "https://randomuser.me/api/portraits/women/44.jpg",
+		text: "good game center in town",
+	},
+	{
+		name: "Iida Niskanen",
+		position: "kochi",
+		photo: "https://randomuser.me/api/portraits/women/68.jpg",
+		text: "super place good ",
+	}
+];
+
+let idx = 1;
+
+function updateTestimonial() {
+  const { name, position, photo, text } = testimonials[idx]
+
+  testemonial.innerHTML = text
+  userImage.src = photo
+  userName.innerHTML = name
+  role.innerHTML = position
+
+  idx++
+
+  if (idx > testimonials.length - 1) {
+    idx = 0
+  }
+}
+
+setInterval(updateTestimonial, 9200)
+  </script>
+</body>
+</html>
